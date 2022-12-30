@@ -26,12 +26,30 @@ class _wordsheet extends State<wordsheet> {
             child: GridView(
               children: [
                 Container(
-                  color: Colors.white70,
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.all(5),
+                  height: 300,
+                  width:double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15), //border corner radius
+                    boxShadow:[
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5), //color of shadow
+                        spreadRadius: 5, //spread radius
+                        blurRadius: 7, // blur radius
+                        offset: Offset(0, 2), // changes position of shadow
+                        //first paramerter of offset is left-right
+                        //second parameter is top to down
+                      ),
+                      //you can set more BoxShadow() here
+                    ],
+                  ),
                   child: Text(
                     "あ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 100.0,
+                      fontSize: 30.0,
                       color: Colors.black,
                       fontWeight: FontWeight.w600,
                     ),
@@ -328,7 +346,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "さ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -358,7 +376,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "し",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -388,7 +406,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "す",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -418,7 +436,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "せ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -448,7 +466,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "そ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -478,7 +496,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "た",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -508,7 +526,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "ち",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -538,7 +556,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "つ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -568,7 +586,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "て",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -598,7 +616,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "と",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -628,7 +646,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "な",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -658,7 +676,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "に",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -688,7 +706,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "ぬ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -718,7 +736,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "ね",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -748,7 +766,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "の",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -778,7 +796,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "は",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -808,7 +826,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "ひ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -838,7 +856,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "ふ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -868,7 +886,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "へ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -898,7 +916,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "ほ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -928,7 +946,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "ま",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -958,7 +976,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "み",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -988,7 +1006,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "む",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1018,7 +1036,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "め",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1048,7 +1066,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "も",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1078,7 +1096,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "や",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1108,7 +1126,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1138,7 +1156,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "ゆ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1168,7 +1186,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1198,7 +1216,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "よ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1228,7 +1246,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "ら",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1258,7 +1276,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "り",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1288,7 +1306,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "る",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1318,7 +1336,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "れ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1348,7 +1366,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "ろ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1378,7 +1396,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "わ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1408,7 +1426,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1438,7 +1456,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "を",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1468,7 +1486,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1498,7 +1516,7 @@ class _wordsheet extends State<wordsheet> {
                     ],
                   ),
                   child: Text(
-                    "あ",
+                    "ん",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -1507,36 +1525,7 @@ class _wordsheet extends State<wordsheet> {
                     ),
                   ),
                 ),
-                Container(
-                  alignment: Alignment.center,
-                  margin: EdgeInsets.all(5),
-                  height: 300,
-                  width:double.infinity,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15), //border corner radius
-                    boxShadow:[
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5), //color of shadow
-                        spreadRadius: 5, //spread radius
-                        blurRadius: 7, // blur radius
-                        offset: Offset(0, 2), // changes position of shadow
-                        //first paramerter of offset is left-right
-                        //second parameter is top to down
-                      ),
-                      //you can set more BoxShadow() here
-                    ],
-                  ),
-                  child: Text(
-                    "あ",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 30.0,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
+
 
               ],
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

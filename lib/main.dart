@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nihongo_learn/view/main_menu.dart';
 import 'package:nihongo_learn/view/wordsheet.dart';
+import 'package:nihongo_learn/view/wordsheetCourse.dart';
 import 'route/route.dart' as route;
 
 void main() {
@@ -14,12 +15,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Mobile Sipedal',
+      title: 'Nihongo.Learn',
       theme: ThemeData(
         // primarySwatch: Colors.blue,
       ),
       onGenerateRoute: route.controller,
-      home: const MyHomePage(title: 'Mobile Sipedal'),
+      home: const MyHomePage(title: 'Nihongo.Learn'),
     );
   }
 }
@@ -38,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   static const List<Widget> halaman = [
     const MainMenu(),
-    const wordsheet(),
+    const wordsheetCourse()
     // Center(child: Text("Dua")),
     // Center(child: Text("Tiga")),
   ];
@@ -111,9 +112,12 @@ class _MyHomePageState extends State<MyHomePage> {
           selectedItemColor: Colors.red,
           onTap: onItemTap,
           items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.add_circle), label: " Mendali"),
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.settings), label: " Pengaturan"),
+            BottomNavigationBarItem(icon: Icon(Icons.home, color: Colors.grey,), label: "Home"),
+            BottomNavigationBarItem(icon: Icon(Icons.list, color: Colors.grey,), label: 'Work Sheet'),
+            BottomNavigationBarItem(icon: Icon(Icons.book, color: Colors.grey,), label: "Lesson"),
+            BottomNavigationBarItem(icon: Icon(Icons.comment_bank, color: Colors.grey,), label: "Purchase"),
+            BottomNavigationBarItem(icon: Icon(Icons.man_rounded, color: Colors.grey,), label: "Account"),
+
           ]),
     );
   }

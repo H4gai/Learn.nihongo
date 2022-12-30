@@ -64,7 +64,7 @@ class _MainMenuState extends State<MainMenu> {
             ),
             const Center(
               child: Text(
-                "Made with ❤ by Mouheb Boucherb",
+                "Made by Nihongo.learn",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
