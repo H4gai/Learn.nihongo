@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nihongo_learn/view/login_page.dart';
+import 'package:nihongo_learn/view/register_page.dart';
 import 'package:nihongo_learn/view/main_menu.dart';
 import 'package:nihongo_learn/view/wordsheet.dart';
 import 'package:nihongo_learn/view/wordsheetCourse.dart';
@@ -61,8 +63,11 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   static const List<Widget> halaman = [
+    const LoginPage(),
+    const RegisterPage(),
     const MainMenu(),
-    const wordsheetCourse()
+    const wordsheetCourse(),
+
     // Center(child: Text("Dua")),
     // Center(child: Text("Tiga")),
   ];

@@ -14,7 +14,7 @@ class _MainMenuState extends State<MainMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.pripmaryColor,
+      backgroundColor: AppColor.primaryColor,
       body: Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 48.0,
@@ -28,7 +28,7 @@ class _MainMenuState extends State<MainMenu> {
               child: Text(
                 "Quizz App",
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 48,
                   fontWeight: FontWeight.bold,
                 ),
@@ -67,7 +67,7 @@ class _MainMenuState extends State<MainMenu> {
                 "Made by Nihongo.learn",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ),
