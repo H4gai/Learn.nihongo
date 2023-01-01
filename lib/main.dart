@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
       ),
       onGenerateRoute: route.controller,
       home: const MyHomePage(title: 'Nihongo.Learn'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -87,9 +88,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      // appBar: AppBar(
+      //   title: Text(widget.title),
+      // ),
+
       body: halaman[idx],
       drawer: Drawer(
         child: ListView(
