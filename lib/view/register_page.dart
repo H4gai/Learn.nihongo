@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:nihongo_learn/ui/shared/color.dart';
+import 'package:nihongo_learn/services/functions/authFunctions.dart';
 import '../ui/shared/color.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -11,6 +15,9 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  TextEditingController email = TextEditingController();
+  TextEditingController pass = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,6 +87,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: TextField(
+                      controller: email,
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Your Email',
@@ -110,6 +118,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: TextField(
+                      controller: pass,
                       obscureText: true,
                       decoration: InputDecoration(
                         border: InputBorder.none,
@@ -139,13 +148,22 @@ class _RegisterPageState extends State<RegisterPage> {
                     ],
                   ),
                   child: Center(
-                    child: Text(
-                      'Register',
-                      style: GoogleFonts.fredoka(
-                        color: Colors.white,
-                        fontSize: 20,
-                      ),
-                    ),
+                    child: ElevatedButton(onPressed: () async {
+                      if(FirebaseAuth.instance.currentUser == null){
+                      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                          email: email.text, password: pass.text);}else{
+                        await FirebaseAuth.instance.signOut();
+                      }
+                    }, child: StreamBuilder<User?>(stream: FirebaseAuth.instance.userChanges(),
+                        builder:(context, snapshot){
+                          if(snapshot.hasData){
+                            return Text('Sign Out');
+                          } else {
+                            return const Text(
+                                'Sign Up'
+                            );
+                          }
+                        }),),
                   ),
                 ),
               ),

@@ -6,14 +6,22 @@ import 'package:nihongo_learn/view/register_page.dart';
 import 'package:nihongo_learn/view/main_menu.dart';
 import 'package:nihongo_learn/view/wordsheet.dart';
 import 'package:nihongo_learn/view/wordsheetCourse.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+// import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'route/route.dart' as route;
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:nihongo_learn/firebase_options.dart';
 
 void main() async {
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  await Firebase.initializeApp();
+  WidgetsFlutterBinding.ensureInitialized();
+  // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  await Firebase.initializeApp(
+      options: FirebaseOptions(
+          apiKey: 'apiKey',
+          appId: 'appId',
+          messagingSenderId: 'messagingSenderId',
+          projectId: 'projectId'),
+  );
   runApp(const MyApp());
 }
 
@@ -33,13 +41,13 @@ class MyApp extends StatelessWidget {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return Home();
+            return wordsheetCourse();
           } else {
             return LoginPage();
           }
         },
       ),
-      debugShowCheckedModeBanner: false,
+      // debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -56,25 +64,25 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int idx = 0;
 
-  void initState(){
-    super.initState();
-    initialization();
-  }
-
-  void initialization() async {
-    // This is where you can initialize the resources needed by your app while
-    // the splash screen is displayed.  Remove the following example because
-    // delaying the user experience is a bad design practice!
-    // ignore_for_file: avoid_print
-    print('ready in 3...');
-    await Future.delayed(const Duration(seconds: 1));
-    print('ready in 2...');
-    await Future.delayed(const Duration(seconds: 1));
-    print('ready in 1...');
-    await Future.delayed(const Duration(seconds: 1));
-    print('go!');
-    FlutterNativeSplash.remove();
-  }
+  // void initState(){
+  //   // super.initState();
+  //   // initialization();
+  // }
+  //
+  // void initialization() async {
+  //   // This is where you can initialize the resources needed by your app while
+  //   // the splash screen is displayed.  Remove the following example because
+  //   // delaying the user experience is a bad design practice!
+  //   // ignore_for_file: avoid_print
+  //   // print('ready in 3...');
+  //   // await Future.delayed(const Duration(seconds: 1));
+  //   // print('ready in 2...');
+  //   // await Future.delayed(const Duration(seconds: 1));
+  //   // print('ready in 1...');
+  //   // await Future.delayed(const Duration(seconds: 1));
+  //   // print('go!');
+  //   // FlutterNativeSplash.remove();
+  // }
 
   static const List<Widget> halaman = [
     const LoginPage(),
