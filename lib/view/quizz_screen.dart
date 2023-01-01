@@ -29,7 +29,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.primaryColor,
+      backgroundColor: AppColor.secondaryColor,
       body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: PageView.builder(

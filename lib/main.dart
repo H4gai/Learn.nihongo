@@ -4,12 +4,14 @@ import 'package:nihongo_learn/view/login_page.dart';
 import 'package:nihongo_learn/view/profile_page.dart';
 import 'package:nihongo_learn/view/register_page.dart';
 import 'package:nihongo_learn/view/main_menu.dart';
+import 'package:nihongo_learn/view/menu.dart';
 import 'package:nihongo_learn/view/wordsheet.dart';
 import 'package:nihongo_learn/view/wordsheetCourse.dart';
 // import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'route/route.dart' as route;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:nihongo_learn/firebase_options.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,13 +39,13 @@ class MyApp extends StatelessWidget {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return Home();
+            return MyHomePage(title:"nihongo.learn");
           } else {
             return LoginPage();
           }
         },
       ),
-      // debugShowCheckedModeBanner: false,
+       debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -81,10 +83,11 @@ class _MyHomePageState extends State<MyHomePage> {
   // }
 
   static const List<Widget> halaman = [
-    const LoginPage(),
-    const RegisterPage(),
+
     const MainMenu(),
     const wordsheetCourse(),
+    const menu(),
+    const Home(),
 
     // Center(child: Text("Dua")),
     // Center(child: Text("Tiga")),

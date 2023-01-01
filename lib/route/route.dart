@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nihongo_learn/main.dart';
 import 'package:nihongo_learn/view/wordsheet.dart';
 import 'package:nihongo_learn/view/main_menu.dart';
 import 'package:nihongo_learn/view/wordsheetCourse.dart';
@@ -17,7 +18,7 @@ void homepage() {}
 Route<dynamic> controller(RouteSettings settings) {
   switch (settings.name) {
     case homePage:
-      return MaterialPageRoute(builder: (context) => wordsheetCourse());
+      return MaterialPageRoute(builder: (context) => MyHomePage(title: "nihongo.learn"));
     case secondPage:
       return MaterialPageRoute(builder: (context) => wordsheet());
      case thirdPage:
