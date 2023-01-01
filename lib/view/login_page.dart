@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nihongo_learn/ui/shared/color.dart';
+import 'package:nihongo_learn/services/functions/authFunctions.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -147,13 +148,24 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                   ),
                   child: Center(
-                    child: Text(
-                      'Log in',
-                      style: GoogleFonts.fredoka(
-                        color: Colors.white,
-                        fontSize: 20,
-                      ),
-                    ),
+                    child: ElevatedButton(
+                        onPressed: () async {
+                          if (_formKey.currentState!.validate()) {
+                            _formKey.currentState!.save();
+                            login
+                                ? AuthServices.signinUser(email, password, context)
+                                : AuthServices.signupUser(
+                                email, password, fullname, context);
+                          }
+                        },
+                        child: Text(login ? 'Login' : 'Signup')),
+                    // Text(
+                    //   'Log in',
+                    //   style: GoogleFonts.fredoka(
+                    //     color: Colors.white,
+                    //     fontSize: 20,
+                    //   ),
+                    // ),
                   ),
                 ),
               ),
