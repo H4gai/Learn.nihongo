@@ -10,11 +10,21 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+
+  final _formKey = GlobalKey<FormState>();
+
+  String email = '';
+  String password = '';
+  String fullname = '';
+  bool login = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.primaryColor,
-      body: SafeArea(
+      body: Form(
+        key: _formKey,
+      child: SafeArea(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -26,6 +36,7 @@ class _LoginPageState extends State<LoginPage> {
                   fontSize: 40,
                   color: AppColor.secondaryColor,
                 ),
+
               ),
               SizedBox(height: 50),
 
@@ -48,11 +59,25 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20.0),
-                    child: TextField(
+                    child: TextFormField(
+                      key: ValueKey('email'),
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Your Email',
                       ),
+                      validator: (value){
+                        if (value!.isEmpty){
+                          return 'Please check your email';
+                        }
+                        else{
+                          return null;
+                        }
+                      },
+                      onSaved: (value){
+                        setState(() {
+                          email = value!;
+                        });
+                      },
                     ),
                   ),
                 ),
@@ -78,12 +103,26 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                    child: TextField(
+                    child: TextFormField(
+                      key: ValueKey('password'),
                       obscureText: true,
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Password',
                       ),
+                      validator: (value){
+                        if (value!.length < 8){
+                          return 'Please check your password';
+                        }
+                        else{
+                          return null;
+                        }
+                      },
+                      onSaved: (value){
+                        setState(() {
+                          password = value!;
+                        });
+                      },
                     ),
                   ),
                 ),
@@ -144,6 +183,6 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
       ),
-    );
+      ),);
   }
 }

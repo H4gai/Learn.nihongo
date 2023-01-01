@@ -1,15 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:nihongo_learn/view/login_page.dart';
+import 'package:nihongo_learn/view/profile_page.dart';
 import 'package:nihongo_learn/view/register_page.dart';
 import 'package:nihongo_learn/view/main_menu.dart';
 import 'package:nihongo_learn/view/wordsheet.dart';
 import 'package:nihongo_learn/view/wordsheetCourse.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'route/route.dart' as route;
+import 'package:firebase_auth/firebase_auth.dart';
 
-void main() {
+void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -25,7 +29,16 @@ class MyApp extends StatelessWidget {
         // primarySwatch: Colors.blue,
       ),
       onGenerateRoute: route.controller,
-      home: const MyHomePage(title: 'Nihongo.Learn'),
+      home: StreamBuilder(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return Home();
+          } else {
+            return LoginPage();
+          }
+        },
+      ),
       debugShowCheckedModeBanner: false,
     );
   }

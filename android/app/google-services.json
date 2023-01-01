@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "944496537927",
+    "project_id": "nihongo-learn",
+    "storage_bucket": "nihongo-learn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944496537927:android:d41375c651091e29539c62",
+        "android_client_info": {
+          "package_name": "com.example.nihongo_learn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944496537927-bpdqaeni080cn2th5a7a6itq1a0kvl31.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIOoIzxQgb3EBqpZ6i9KMckFJV5b6vc38"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944496537927-bpdqaeni080cn2th5a7a6itq1a0kvl31.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
