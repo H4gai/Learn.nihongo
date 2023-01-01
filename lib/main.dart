@@ -16,12 +16,8 @@ void main() async {
   // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await Firebase.initializeApp(
-      options: FirebaseOptions(
-          apiKey: 'apiKey',
-          appId: 'appId',
-          messagingSenderId: 'messagingSenderId',
-          projectId: 'projectId'),
-  );
+       options: DefaultFirebaseOptions.currentPlatform,
+       );
   runApp(const MyApp());
 }
 
@@ -41,7 +37,7 @@ class MyApp extends StatelessWidget {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return wordsheetCourse();
+            return Home();
           } else {
             return LoginPage();
           }
