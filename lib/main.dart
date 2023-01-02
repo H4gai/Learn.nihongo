@@ -11,6 +11,8 @@ import 'package:nihongo_learn/view/wordsheetCourse.dart';
 import 'route/route.dart' as route;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:nihongo_learn/firebase_options.dart';
+import 'package:nihongo_learn/ui/shared/color.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 void main() async {
@@ -87,7 +89,8 @@ class _MyHomePageState extends State<MyHomePage> {
     const MainMenu(),
     const wordsheetCourse(),
     const menu(),
-    const Home(),
+    // const Home(),
+    const Profile(),
 
     // Center(child: Text("Dua")),
     // Center(child: Text("Tiga")),
@@ -159,14 +162,14 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: idx,
-          selectedItemColor: Colors.red,
+          selectedItemColor: AppColor.secondaryColor,
           onTap: onItemTap,
           items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.home, color: Colors.grey,), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.list, color: Colors.grey,), label: 'Work Sheet'),
-            BottomNavigationBarItem(icon: Icon(Icons.book, color: Colors.grey,), label: "Lesson"),
-            BottomNavigationBarItem(icon: Icon(Icons.comment_bank, color: Colors.grey,), label: "Purchase"),
-            BottomNavigationBarItem(icon: Icon(Icons.man_rounded, color: Colors.grey,), label: "Account"),
+            BottomNavigationBarItem(icon: Icon(Icons.home_rounded, color: Colors.grey,), label: "Home"),
+            BottomNavigationBarItem(icon: Icon(Icons.translate, color: Colors.grey,), label: 'Kana Sheet'),
+            BottomNavigationBarItem(icon: Icon(Icons.menu_book_rounded, color: Colors.grey,), label: "Lesson"),
+            BottomNavigationBarItem(icon: Icon(Icons.stars, color: Colors.grey,), label: "Purchase"),
+            BottomNavigationBarItem(icon: Icon(Icons.person, color: Colors.grey,), label: "Account"),
 
           ]),
     );
