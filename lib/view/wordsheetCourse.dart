@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nihongo_learn/route/route.dart' as route;
+import 'wordsheet.dart';
 
 class wordsheetCourse extends StatefulWidget {
   const wordsheetCourse({super.key});
@@ -99,12 +100,12 @@ class _wordsheetCourse extends State<wordsheetCourse> {
                     elevation: 5,
                   ),
                   onPressed: () {
-                    print('Pressed');
+                    Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)
+                    {
+                      return wordsheet();
+                    }));
                   },
                 ),
-
-
-
 
               ],
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

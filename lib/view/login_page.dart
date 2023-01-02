@@ -39,7 +39,8 @@ class _LoginPageState extends State<LoginPage> {
                 style: GoogleFonts.fredoka(
                 fontSize: 40,
                 color: AppColor.secondaryColor,
-              ),),
+                ),
+              ),
 
               SizedBox(height: 50),
 

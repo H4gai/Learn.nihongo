@@ -7,6 +7,8 @@ import 'package:nihongo_learn/view/main_menu.dart';
 import 'package:nihongo_learn/view/menu.dart';
 import 'package:nihongo_learn/view/wordsheet.dart';
 import 'package:nihongo_learn/view/wordsheetCourse.dart';
+import 'package:nihongo_learn/view/lessonPage.dart';
+import 'package:nihongo_learn/view/payment.dart';
 // import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'route/route.dart' as route;
 import 'package:firebase_auth/firebase_auth.dart';
@@ -86,10 +88,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   static const List<Widget> halaman = [
 
-    const MainMenu(),
-    const wordsheetCourse(),
     const menu(),
-    // const Home(),
+    const wordsheetCourse(),
+    const lesson(),
+    const payment(),
     const Profile(),
 
     // Center(child: Text("Dua")),
@@ -116,50 +118,6 @@ class _MyHomePageState extends State<MyHomePage> {
       // ),
 
       body: halaman[idx],
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            const DrawerHeader(
-                child: Center(
-                  child:
-                  CircleAvatar(
-                    backgroundImage: NetworkImage ("http://medialengka.com/profile.jpg"),
-                    maxRadius: 50,
-                  ),
-                )
-            ),
-            ListTile(
-              title: const Text("Logout"),
-              onTap: () {
-              },
-            ),
-            ListTile(
-              title: const Text("Home"),
-              onTap: () {
-                gantiItem(2);
-              },
-            ),
-            ListTile(
-              title: const Text("Setting"),
-              onTap: () {
-                gantiItem(1);
-              },
-            ),
-            ListTile(
-              title: const Text("Input Medali"),
-              onTap: () {
-                gantiItem(0);
-              },
-            ),
-            ListTile(
-              title: const Text("Page 5"),
-              onTap: () {
-                gantiItem(3);
-              },
-            ),
-          ],
-        ),
-      ),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: idx,
           selectedItemColor: AppColor.secondaryColor,

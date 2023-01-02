@@ -11,6 +11,7 @@ import 'package:nihongo_learn/view/register_page.dart';
 const String homePage = 'homepage';
 const String secondPage = 'secondpage';
 const String thirdPage = 'thirdpage';
+const String Quiz = 'quiz';
 
 void homepage() {}
 
@@ -23,6 +24,8 @@ Route<dynamic> controller(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => wordsheet());
      case thirdPage:
        return MaterialPageRoute(builder: (context) => RegisterPage() );
+    case Quiz:
+      return MaterialPageRoute(builder: (context) => MainMenu() );
     default:
       throw ('this route name does not exist');
   }
