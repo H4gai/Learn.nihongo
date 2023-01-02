@@ -49,7 +49,9 @@ class _menu extends State<menu> {
                                     style: TextButton.styleFrom(
                                       backgroundColor: Colors.redAccent,
                                     ),
-                                    onPressed: () {/* ... */},
+                                    onPressed: () {
+                                        Navigator.pushNamed(context, route.Lesson);
+                                    },
                                   ),
                                   const SizedBox(width: 15),
                                 ],
@@ -76,30 +78,48 @@ class _menu extends State<menu> {
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: <Widget>[
-                                  TextButton(
-                                    child: const Text('My Course', style: TextStyle(color: Colors.white),),
-                                    style: TextButton.styleFrom(
-                                      backgroundColor: Colors.redAccent,
+                                  Padding(
+                                      padding: EdgeInsets.all(15.0),
+                                      child:Row(
+                                      children:<Widget>[
+                                        CircularProgressIndicator(
+                                        value: 0.5,
+                                        semanticsLabel: 'Circular progress indicator',
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.fromLTRB(10.0, 0, 0, 0),
+                                          child: Text("Kanji", style: TextStyle(fontWeight: FontWeight.w600)),),
+                                      ],
                                     ),
-                                    onPressed: () {/* ... */},
                                   ),
-                                  const SizedBox(width: 15),
-                                  TextButton(
-                                    child: const Text('My Course', style: TextStyle(color: Colors.white),),
-                                    style: TextButton.styleFrom(
-                                      backgroundColor: Colors.redAccent,
+                                  Padding(
+                                      padding: EdgeInsets.all(15.0),
+                                      child:Row(
+                                      children:<Widget>[
+                                        CircularProgressIndicator(
+                                        value: 0.8,
+                                        semanticsLabel: 'Circular progress indicator',
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.fromLTRB(10.0, 0, 0, 0),
+                                          child: Text("Katakana", style: TextStyle(fontWeight: FontWeight.w600)),),
+                                      ],
                                     ),
-                                    onPressed: () {/* ... */},
                                   ),
-                                  const SizedBox(width: 15),
-                                  TextButton(
-                                    child: const Text('My Course', style: TextStyle(color: Colors.white),),
-                                    style: TextButton.styleFrom(
-                                      backgroundColor: Colors.redAccent,
+                                  Padding(
+                                      padding: EdgeInsets.all(15.0),
+                                      child:Row(
+                                      children:<Widget>[
+                                        CircularProgressIndicator(
+                                        value: 0.1,
+                                        semanticsLabel: 'Circular progress indicator',
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.fromLTRB(10.0, 0, 0, 0),
+                                          child: Text("Hiragana", style: TextStyle(fontWeight: FontWeight.w600)),),
+                                      ],
                                     ),
-                                    onPressed: () {/* ... */},
                                   ),
-                                  const SizedBox(width: 15),
                                 ],
                               ),
                             ],
