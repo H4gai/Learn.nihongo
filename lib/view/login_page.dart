@@ -25,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.primaryColor,
+      backgroundColor: AppColor.subtleWhite,
       body: Form(
         key: _formKey,
       child: SafeArea(
@@ -38,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
               Text(login ? 'Login' : 'Signup',
                 style: GoogleFonts.fredoka(
                 fontSize: 40,
-                color: AppColor.secondaryColor,
+                color: AppColor.softRed,
               ),),
 
               SizedBox(height: 50),
@@ -138,7 +138,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Container(
                   padding: EdgeInsets.all(20),
                   decoration: BoxDecoration(
-                    color: AppColor.secondaryColor,
+                    color: AppColor.softRed,
                     borderRadius: BorderRadius.circular(15),
                     boxShadow: [
                       BoxShadow(
@@ -177,7 +177,7 @@ class _LoginPageState extends State<LoginPage> {
                           : "Already have an account? Login",
                         style: GoogleFonts.fredoka(
                           fontSize: 40,
-                          color: AppColor.secondaryColor,
+                          color: AppColor.softRed,
                         ),)),
 
             ],

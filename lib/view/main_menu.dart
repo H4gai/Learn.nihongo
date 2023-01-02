@@ -14,7 +14,7 @@ class _MainMenuState extends State<MainMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.secondaryColor,
+      backgroundColor: AppColor.softRed,
       body: Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 48.0,
@@ -46,7 +46,7 @@ class _MainMenuState extends State<MainMenu> {
                         ));
                   },
                   shape: const StadiumBorder(),
-                  fillColor: AppColor.secondaryColor,
+                  fillColor: AppColor.softRed,
                   child: const Padding(
                     padding:
                         EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),

@@ -89,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
     const MainMenu(),
     const wordsheetCourse(),
     const menu(),
-    // const Home(),
+    const Profile(),
     const Profile(),
 
     // Center(child: Text("Dua")),
@@ -162,7 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: idx,
-          selectedItemColor: AppColor.secondaryColor,
+          selectedItemColor: AppColor.softRed,
           onTap: onItemTap,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home_rounded, color: Colors.grey,), label: "Home"),

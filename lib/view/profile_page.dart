@@ -20,10 +20,18 @@ class _ProfileState extends State<Profile> {
               onPressed: () async {
                 await FirebaseAuth.instance.signOut();
               },
-              icon: Icon(Icons.leave_bags_at_home))
+              icon: Icon(Icons.logout_rounded))
         ],
         title: Text('Profile'),
       ),
+      body: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: Container(
+
+          ),
+        )
+      )
     );
   }
 }

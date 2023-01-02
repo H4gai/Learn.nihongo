@@ -26,7 +26,7 @@ Widget questionWidget(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
             ),
-            fillColor: AppColor.secondaryColor,
+            fillColor: AppColor.softRed,
             onPressed: function,
             child: Text(questionModel.answers!.keys.toList()[i]),
           ),
