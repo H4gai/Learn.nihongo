@@ -29,7 +29,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.secondaryColor,
+      backgroundColor: AppColor.softRed,
       body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: PageView.builder(
@@ -92,7 +92,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                             ? questions[index].answers!.values.toList()[i]
                                 ? Colors.green
                                 : Colors.red
-                            : AppColor.secondaryColor,
+                            : AppColor.softRed,
                         onPressed: !answered
                             ? () {
                                 if (questions[index]

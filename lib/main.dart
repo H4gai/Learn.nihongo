@@ -16,14 +16,13 @@ import 'package:nihongo_learn/firebase_options.dart';
 import 'package:nihongo_learn/ui/shared/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await Firebase.initializeApp(
-       options: DefaultFirebaseOptions.currentPlatform,
-       );
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -36,20 +35,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Nihongo.Learn',
       theme: ThemeData(
-        // primarySwatch: Colors.blue,
-      ),
+          // primarySwatch: Colors.blue,
+          ),
       onGenerateRoute: route.controller,
       home: StreamBuilder(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return MyHomePage(title:"nihongo.learn");
+            return MyHomePage(title: "nihongo.learn");
           } else {
             return LoginPage();
           }
         },
       ),
-       debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -87,7 +86,6 @@ class _MyHomePageState extends State<MyHomePage> {
   // }
 
   static const List<Widget> halaman = [
-
     const menu(),
     const wordsheetCourse(),
     const lesson(),
@@ -120,15 +118,39 @@ class _MyHomePageState extends State<MyHomePage> {
       body: halaman[idx],
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: idx,
-          selectedItemColor: AppColor.secondaryColor,
+          selectedItemColor: AppColor.softRed,
           onTap: onItemTap,
           items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.home_rounded, color: Colors.grey,), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.translate, color: Colors.grey,), label: 'Kana Sheet'),
-            BottomNavigationBarItem(icon: Icon(Icons.menu_book_rounded, color: Colors.grey,), label: "Lesson"),
-            BottomNavigationBarItem(icon: Icon(Icons.stars, color: Colors.grey,), label: "Purchase"),
-            BottomNavigationBarItem(icon: Icon(Icons.person, color: Colors.grey,), label: "Account"),
-
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.home_rounded,
+                  color: Colors.grey,
+                ),
+                label: "Home"),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.translate,
+                  color: Colors.grey,
+                ),
+                label: 'Kana Sheet'),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.menu_book_rounded,
+                  color: Colors.grey,
+                ),
+                label: "Lesson"),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.stars,
+                  color: Colors.grey,
+                ),
+                label: "Purchase"),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.person,
+                  color: Colors.grey,
+                ),
+                label: "Account"),
           ]),
     );
   }

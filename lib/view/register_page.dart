@@ -21,7 +21,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.primaryColor,
+      backgroundColor: AppColor.subtleWhite,
       body: SafeArea(
         child: Center(
           child: Column(
@@ -32,7 +32,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 'Register',
                 style: GoogleFonts.fredoka(
                   fontSize: 40,
-                  color: AppColor.secondaryColor,
+                  color: AppColor.softRed,
                 ),
               ),
               SizedBox(height: 50),
@@ -136,7 +136,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 child: Container(
                   padding: EdgeInsets.all(20),
                   decoration: BoxDecoration(
-                    color: AppColor.secondaryColor,
+                    color: AppColor.softRed,
                     borderRadius: BorderRadius.circular(15),
                     boxShadow: [
                       BoxShadow(
@@ -183,7 +183,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   Text(
                     ' Login',
                     style: GoogleFonts.fredoka(
-                      color: AppColor.secondaryColor,
+                      color: AppColor.softRed,
                       fontSize: 13,
                     ),
                   ),
