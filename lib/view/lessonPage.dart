@@ -32,7 +32,7 @@ class _lesson extends State<lesson> {
             onPressed: () {
               Navigator.pushNamed(
                   context,
-                  route.Quiz);
+                  route.detailLesson);
             },
             style: TextButton.styleFrom( //<-- SEE HERE
               side: BorderSide(width: 3.0),
@@ -72,7 +72,7 @@ class _lesson extends State<lesson> {
               onPressed: () {
                 Navigator.pushNamed(
                     context,
-                    route.Quiz);
+                    route.detailLesson);
               },
               style: TextButton.styleFrom( //<-- SEE HERE
                 side: BorderSide(width: 3.0),
@@ -112,7 +112,7 @@ class _lesson extends State<lesson> {
               onPressed: () {
                 Navigator.pushNamed(
                     context,
-                    route.Quiz);
+                    route.detailLesson);
               },
               style: TextButton.styleFrom( //<-- SEE HERE
                 side: BorderSide(width: 3.0),
@@ -152,7 +152,7 @@ class _lesson extends State<lesson> {
               onPressed: () {
                 Navigator.pushNamed(
                     context,
-                    route.Quiz);
+                    route.detailLesson);
               },
               style: TextButton.styleFrom( //<-- SEE HERE
                 side: BorderSide(width: 3.0),
@@ -191,7 +191,7 @@ class _lesson extends State<lesson> {
               onPressed: () {
                 Navigator.pushNamed(
                     context,
-                    route.Quiz);
+                    route.detailLesson);
               },
               style: TextButton.styleFrom( //<-- SEE HERE
                 side: BorderSide(width: 3.0),

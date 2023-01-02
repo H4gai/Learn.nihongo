@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:nihongo_learn/main.dart';
+import 'package:nihongo_learn/view/detailLesson_page.dart';
+import 'package:nihongo_learn/view/myCourse_page.dart';
 import 'package:nihongo_learn/view/wordsheet.dart';
 import 'package:nihongo_learn/view/main_menu.dart';
-import 'package:nihongo_learn/view/wordsheetCourse.dart';
-import 'package:nihongo_learn/view/login_page.dart';
 import 'package:nihongo_learn/view/register_page.dart';
 import 'package:nihongo_learn/view/lessonPage.dart';
 
@@ -13,6 +13,8 @@ const String secondPage = 'secondpage';
 const String thirdPage = 'thirdpage';
 const String Quiz = 'quiz';
 const String Lesson = 'lesson';
+const String detailLesson = 'detaillesson';
+const String myCourse = 'mycourse';
 
 void homepage() {}
 
@@ -23,12 +25,16 @@ Route<dynamic> controller(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => MyApp());
     case secondPage:
       return MaterialPageRoute(builder: (context) => wordsheet());
-     case thirdPage:
-       return MaterialPageRoute(builder: (context) => RegisterPage() );
+    case thirdPage:
+      return MaterialPageRoute(builder: (context) => RegisterPage() );
     case Quiz:
       return MaterialPageRoute(builder: (context) => MainMenu() );
     case Lesson:
       return MaterialPageRoute(builder: (context) => lesson() );
+    case detailLesson:
+      return MaterialPageRoute(builder: (context) => DetailLesson() );
+    case myCourse:
+      return MaterialPageRoute(builder: (context) => MyCourse() );
     default:
       throw ('this route name does not exist');
   }
